@@ -1,0 +1,19 @@
+.navigation {
+  display: block;
+  // display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+}
+.navigation__item {
+  // display: inline-block;
+}
+.navigation__link {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}

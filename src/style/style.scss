@@ -1,0 +1,78 @@
+@mixin textSize($weight, $style, $size, $lineHeight, $color) {
+  font-weight: $weight;
+  font-style: $style;
+  font-size: $size + rem;
+  line-height: $lineHeight + rem;
+  color: $color;
+}
+$textColor2: rgba(74, 74, 74, 1);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 10px;
+  font-family: Montserrat, "Helvetica Neue";
+  color: $textColor2;
+}
+.App {
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+.App > * {
+  border: 1px solid red;
+}
+// ------------------------------------
+.header {
+  padding: 2.2rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    width: 10.8rem;
+    height: 3.5rem;
+    position: relative;
+    display: block;
+  }
+  .logo__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    object-position: center;
+  }
+  @media screen and (max-width: 1440px) {
+    justify-content: space-around;
+    padding: 2.2rem;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 2.2rem;
+    .logo {
+      width: 11.3rem;
+      height: 3.6rem;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    padding: 0.8rem;
+    .logo {
+      width: 6.3rem;
+      height: 2rem;
+    }
+  }
+}
+// -----------------------------------
+
+@media screen and (max-width: 1440px) {
+  .App {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 375px) {
+}
